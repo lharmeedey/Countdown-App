@@ -1,0 +1,23 @@
+modules:
+  jira:dashboardGadget:
+    - key: counting-hello-world-gadget
+      title: counting
+      description: A hello world dashboard gadget.
+      thumbnail: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+      resource: main
+      resolver:
+        function: resolver
+      edit:
+        resource: main
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/public
+permissions:
+  content:
+    styles:
+      - unsafe-inline
+app:
+  id: ari:cloud:ecosystem::app/ae392eae-0d7c-4f44-a492-6be39069c420
